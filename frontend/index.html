@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Euphonious</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR MENU (hidden by default) ================= -->
+  <nav id="sidebar">
+    <div id="sidebar-close">&times;</div>
+
+    <ul id="sidebar-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Library</a></li>
+      <li><a href="#">Playlist</a></li>
+    </ul>
+
+    <ul id="sidebar-auth">
+      <li><a href="#">Login</a></li>
+      <li><a href="#" id="signup-link">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- dark overlay shown behind sidebar when it's open -->
+  <div id="overlay"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar">
+
+    <div id="navbar-left">
+      <div id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="logo">
+        <span id="logo-icon">&#9835;</span>
+        <span id="logo-text">Euphonious</span>
+      </div>
+    </div>
+
+     <!-- ================= SEARCH BAR ================= -->
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search songs, artists, playlists...">
+  </div>
+
+    <div id="navbar-right">
+      <div id="profile-icon">&#128100;</div>
+      <div id="settings-icon">&#9881;</div>
+    </div>
+
+  </header>
+
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- Playlists section -->
+    <section class="content-section">
+      <h2 class="section-title">Playlists</h2>
+      <div class="card-row" id="playlist-row">
+
+        <div class="card">
+          <div class="card-image">&#127925;</div>
+          <p class="card-title">Chill Vibes</p>
+          <p class="card-subtitle">32 songs</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127908;</div>
+          <p class="card-title">Workout Mix</p>
+          <p class="card-subtitle">21 songs</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127911;</div>
+          <p class="card-title">Late Night</p>
+          <p class="card-subtitle">18 songs</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127926;</div>
+          <p class="card-title">Focus Flow</p>
+          <p class="card-subtitle">27 songs</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Popular Artists section -->
+    <section class="content-section">
+      <h2 class="section-title">Popular Artists</h2>
+      <div class="card-row" id="artist-row">
+
+        <div class="card artist-card">
+          <div class="card-image round">&#127908;</div>
+          <p class="card-title">Aria Monroe</p>
+          <p class="card-subtitle">Pop</p>
+        </div>
+
+        <div class="card artist-card">
+          <div class="card-image round">&#127908;</div>
+          <p class="card-title">Leo Marsh</p>
+          <p class="card-subtitle">Indie</p>
+        </div>
+
+        <div class="card artist-card">
+          <div class="card-image round">&#127908;</div>
+          <p class="card-title">Nova Blake</p>
+          <p class="card-subtitle">Electronic</p>
+        </div>
+
+        <div class="card artist-card">
+          <div class="card-image round">&#127908;</div>
+          <p class="card-title">Ezra Wilde</p>
+          <p class="card-subtitle">Hip-Hop</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Made For You section -->
+    <section class="content-section">
+      <h2 class="section-title">Made For You</h2>
+      <div class="card-row" id="madeforyou-row">
+
+        <div class="card">
+          <div class="card-image">&#127926;</div>
+          <p class="card-title">Daily Mix 1</p>
+          <p class="card-subtitle">Based on your taste</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127926;</div>
+          <p class="card-title">Daily Mix 2</p>
+          <p class="card-subtitle">Based on your taste</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127926;</div>
+          <p class="card-title">Discover Weekly</p>
+          <p class="card-subtitle">New for you</p>
+        </div>
+
+        <div class="card">
+          <div class="card-image">&#127926;</div>
+          <p class="card-title">Release Radar</p>
+          <p class="card-subtitle">New releases</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html> 

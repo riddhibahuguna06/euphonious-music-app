@@ -25,7 +25,6 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: brown;
 }
 
 /* hamburger menu icon */
@@ -67,7 +66,6 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
-  background-color: blue;
 }
 
 #profile-icon,
@@ -91,8 +89,7 @@ body {
 /* ============ SEARCH BAR ============ */
 #search-container {
   padding: 18px 24px;
-  background-color: aqua;
-  width: 100%;
+  width : 100% ;
   max-width: 580px;
 }
 
@@ -107,6 +104,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   outline: none;
+  text-align: center;
 }
 
 #search-input::placeholder {
@@ -200,6 +198,7 @@ body {
 /* ============ MAIN CONTENT ============ */
 #main-content {
   padding: 10px 24px 60px;
+  background-color:#8b5cf6 ;
 }
 
 .content-section {
@@ -217,6 +216,8 @@ body {
   gap: 18px;
   overflow-x: auto;
   padding-bottom: 8px;
+  background-color: aliceblue;
+  justify-content: space-between;
 }
 
 .card {

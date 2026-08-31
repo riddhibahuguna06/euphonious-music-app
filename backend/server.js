@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const pool = require("./db")
+
+const userRouter = require("./routes/userRoute");
 
 app.use(express.json()) ;
 
@@ -9,17 +10,7 @@ app.use((req , res , next) => {
     next();
 });
 
-async function testDatabaseConnection() {
-  try {
-    await pool.query("SELECT 1");
-    console.log("✅ Database connected successfully");
-  } catch (err) {
-    console.error("❌ Database connection failed:", err.message);
-  }
-}
-
-testDatabaseConnection();
-
+app.use("/api/registerUser" , userRouter);
 
 
 

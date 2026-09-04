@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const validateTask = require("../middlewares/validateUser");
+const validateUser = require("../middlewares/validateUser");
 
-const {registerUser} = require("../controllers/userController");
+const {registerUser , getUser} = require("../controllers/userController");
 
-router.post("/" , validateTask , registerUser);
+
+router.post("/" , validateUser , registerUser);
+
+router.get("/:id" , getUser);
 
 module.exports = router ;

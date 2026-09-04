@@ -3,6 +3,7 @@ const app = express();
 
 const userRouter = require("./routes/userRoute");
 const errorHandler = require("./middlewares/errorHandler");
+const playlistRouter = require("./routes/playlistRoute");
 
 app.use(express.json()) ;
 
@@ -11,7 +12,11 @@ app.use((req , res , next) => {
     next();
 });
 
-app.use("/api/registerUser" , userRouter);
+app.use("/api/users" , userRouter);
+
+app.use("/api/users" , userRouter);
+
+app.use("/api/playlists" , playlistRouter) ;
 
 app.use(errorHandler)
 

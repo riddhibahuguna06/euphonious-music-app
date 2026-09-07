@@ -14,11 +14,11 @@ app.use((req , res , next) => {
 
 app.use("/api/users" , userRouter);
 
-app.use("/api/users" , userRouter);
-
 app.use("/api/playlists" , playlistRouter) ;
 
-app.use(errorHandler)
+app.use("/api/users", playlistRouter);
+
+app.use(errorHandler);
 
 
 app.listen(3000 , () => {

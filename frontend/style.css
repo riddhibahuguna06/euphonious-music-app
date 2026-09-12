@@ -1,282 +1,60 @@
-/* ============ RESET ============ */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 30px;
 }
 
-/* ============ NAVBAR ============ */
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  background-color: #181818;
-  border-bottom: 1px solid #2a2a2a;
+header {
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
 
-#navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+header h1 {
+    margin-bottom: 8px;
 }
 
-/* hamburger menu icon */
-#menu-icon {
-  width: 26px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+main {
+    max-width: 900px;
+    margin: auto;
 }
 
-#menu-icon span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #f2f2f2;
-  border-radius: 2px;
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
 }
 
-#logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+h2 {
+    margin-bottom: 20px;
 }
 
-#logo-icon {
-  font-size: 24px;
-  color: #8b5cf6;
+#playlist-container,
+#songs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-#logo-text {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.playlist,
+.song {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
 }
 
-#navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-#profile-icon,
-#settings-icon {
-  font-size: 20px;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #232323;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#profile-icon:hover,
-#settings-icon:hover {
-  background-color: #2c2c2c;
-}
-
-/* ============ SEARCH BAR ============ */
-#search-container {
-  padding: 18px 24px;
-  width : 100% ;
-  max-width: 580px;
-}
-
-#search-input {
-  width: 100%;
-  max-width: 580px;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 24px;
-  background-color: #232323;
-  color: #f2f2f2;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  outline: none;
-  text-align: center;
-}
-
-#search-input::placeholder {
-  color: #8a8a8a;
-}
-
-#search-input:focus {
-  outline: 2px solid #8b5cf6;
-}
-
-/* ============ SIDEBAR ============ */
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  width: 240px;
-  height: 100%;
-  background-color: #181818;
-  padding: 24px 20px;
-  transition: left 0.3s ease;
-  z-index: 100;
-}
-
-#sidebar.open {
-  left: 0;
-}
-
-#sidebar-close {
-  font-size: 26px;
-  cursor: pointer;
-  margin-bottom: 24px;
-  width: fit-content;
-}
-
-#sidebar-links {
-  list-style: none;
-  margin-bottom: 40px;
-}
-
-#sidebar-links li {
-  margin-bottom: 18px;
-}
-
-#sidebar-links a {
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-#sidebar-links a:hover {
-  color: #8b5cf6;
-}
-
-#sidebar-auth {
-  list-style: none;
-  border-top: 1px solid #2a2a2a;
-  padding-top: 20px;
-}
-
-#sidebar-auth li {
-  margin-bottom: 14px;
-}
-
-#sidebar-auth a {
-  color: #cfcfcf;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-#sidebar-auth a:hover {
-  color: #8b5cf6;
-}
-
-/* dark background overlay when sidebar is open */
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 90;
-}
-
-#overlay.show {
-  display: block;
-}
-
-/* ============ MAIN CONTENT ============ */
-#main-content {
-  padding: 10px 24px 60px;
-  background-color:#8b5cf6 ;
-}
-
-.content-section {
-  margin-bottom: 36px;
-}
-
-.section-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.card-row {
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  background-color: aliceblue;
-  justify-content: space-between;
-}
-
-.card {
-  background-color: #181818;
-  border-radius: 10px;
-  padding: 14px;
-  min-width: 160px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.card:hover {
-  background-color: #232323;
-}
-
-.card-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.card-image.round {
-  border-radius: 50%;
-}
-
-.card-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.card-subtitle {
-  font-size: 12px;
-  color: #9a9a9a;
-}
-
-/* ============ SCROLLBAR (card rows) ============ */
-.card-row::-webkit-scrollbar {
-  height: 6px;
-}
-
-.card-row::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 10px;
-}
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 600px) {
-  #logo-text {
-    display: none;
-  }
-
-  .card {
-    min-width: 130px;
-  }
+button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
